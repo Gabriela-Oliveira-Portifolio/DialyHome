@@ -11,3 +11,23 @@
 A plataforma contará com duas visões: paciente e médico. O paciente poderá registrar diariamente informações essenciais sobre sua diálise, além de receber alertas e notificações sobre horários de medicação e sessões de diálise. O médico, por sua vez, terá acesso a um painel com os dados de seus pacientes em tempo real, podendo monitorar indicadores críticos, configurar alertas e fornecer recomendações personalizadas, além de inshits sobre divergências  nos valores
 A aplicação será responsiva para acesso tanto em dispositivos móveis quanto em desktops. Com um sistema intuitivo e eficiente, espera-se que essa solução facilite o acompanhamento dos pacientes, permitindo um tratamento mais seguro e eficaz.
 
+> [!NOTE]
+>
+> ## Em caso de duvida
+>
+> [O que é o software e para que serve?](https://github.com/Gabriela-Oliveira-Portifolio)
+>
+> [Onde está a documentação completa (RFC)?](https://github.com/Gabriela-Oliveira-Portifolio)
+> 
+> [Quais tecnologias são usadas?](https://github.com/Gabriela-Oliveira-Portifolio)
+> 
+> [Onde está o código fonte?](https://github.com/Gabriela-Oliveira-Portifolio)
+> 
+> [Qual a arquitetura do sistema?](https://github.com/Gabriela-Oliveira-Portifolio)
+> 
+> [Como é feito o deploy?](https://github.com/Gabriela-Oliveira-Portifolio)
+> 
+> [Onde está o roadmap do projeto?](https://github.com/Gabriela-Oliveira-Portifolio)
+> 
+> [Onde vejo o design da interface?](https://github.com/Gabriela-Oliveira-Portifolio)
+
