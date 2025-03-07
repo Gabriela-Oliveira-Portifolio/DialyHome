@@ -15,7 +15,7 @@ A aplicação será responsiva para acesso tanto em dispositivos móveis quanto 
 >
 > ## Em caso de duvida
 >
-> [O que é o software e para que serve?](https://github.com/Gabriela-Oliveira-Portifolio)
+> [O que é o software e para que serve?](https://github.com/Gabriela-Oliveira-Portifolio/DialyHome/wiki/O-que-%C3%A9-o-sistema-Web-e-para-que-ele-serve%3F)
 >
 > [Onde está a documentação completa (RFC)?](https://github.com/Gabriela-Oliveira-Portifolio)
 > 
