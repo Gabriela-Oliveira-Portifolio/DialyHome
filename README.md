@@ -23,15 +23,11 @@ A aplicação será responsiva para acesso tanto em dispositivos móveis quanto 
 >
 > [Onde está o diagrama de caso de uso?](https://github.com/Gabriela-Oliveira-Portifolio/DialyHome/blob/main/diagrama_caso_uso.svg)
 >
-> [Onde conseguimos ver detalhes sobre a arquitetura do projeto?](https://github.com/Gabriela-Oliveira-Portifolio/DialyHome/wiki/Arquitetura-do-projeto)
-
-
-
-
-
-
+> [Qual a arquitetura do sistema?](https://github.com/Gabriela-Oliveira-Portifolio/DialyHome/wiki/Arquitetura-do-projeto)
 > 
-> [Quais tecnologias são usadas?](https://github.com/Gabriela-Oliveira-Portifolio)
+> [Quais tecnologias são usadas?](https://github.com/Gabriela-Oliveira-Portifolio/DialyHome/wiki/Tecnologias-Usadas)
+>
+> [Como funciona o Gerenciamento do projeto](https://github.com/Gabriela-Oliveira-Portifolio/DialyHome/wiki/Tecnologias-Usadas)
 > 
 > [Onde está o código fonte?](https://github.com/Gabriela-Oliveira-Portifolio)
 > 
