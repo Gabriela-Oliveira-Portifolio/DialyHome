@@ -22,6 +22,14 @@ A aplicação será responsiva para acesso tanto em dispositivos móveis quanto 
 > [Onde está a documentação completa (RFC)?](https://github.com/Gabriela-Oliveira-Portifolio)
 >
 > [Onde está o diagrama de caso de uso?](https://github.com/Gabriela-Oliveira-Portifolio/DialyHome/blob/main/diagrama_caso_uso.svg)
+>
+> [Como o front-end será construido?](https://github.com/Gabriela-Oliveira-Portifolio/DialyHome/wiki/Como-o-front%E2%80%90end-ser%C3%A1-construido)
+
+
+
+
+
+
 > 
 > [Quais tecnologias são usadas?](https://github.com/Gabriela-Oliveira-Portifolio)
 > 
