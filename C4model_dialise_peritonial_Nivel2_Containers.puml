@@ -1,0 +1,26 @@
+@startuml
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+title DialyHome - Diagrama de Containers
+
+' Definindo os atores do sistema
+Person(paciente, "Paciente", "Usuário que realiza diálise peritoneal domiciliar")
+Person(medico, "Médico", "Profissional que monitora pacientes")
+
+Container_Boundary(sistema, "Sistema DialyHome") {
+    Container(web, "Aplicação Web", "React", "Interface responsiva para pacientes e médicos")
+    Container(api, "API Backend", "Node.js/Express", "Lógica de negócios e integrações")
+    Container(db, "Banco de Dados", "PostgreSQL", "Armazenamento de dados transacionais")
+}
+
+System_Ext(email, "Serviço de Email", "Nodemailer/SMTP")
+System_Ext(s3, "Armazenamento de Arquivos", "Amazon S3")
+
+Rel(web, api, "Consome API via HTTPS")
+Rel(api, db, "Consulta/Atualiza dados via Sequelize ORM")
+Rel(api, email, "Envia notificações via Nodemailer")
+Rel(api, s3, "Gerencia uploads/downloads via SDK AWS")
+
+Rel_U(paciente, web, "Usa interface do paciente")
+Rel_U(medico, web, "Usa interface médica")
+@enduml
