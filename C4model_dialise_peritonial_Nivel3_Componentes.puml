@@ -1,0 +1,30 @@
+@startuml
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+' Container principal do backend
+Container(api, "API Backend", "Node.js/Express", "Lógica de negócios e integrações")
+
+Component(dialise, "Módulo Diálise", "Service", "Gerencia sessões de diálise")
+Component(sintomas, "Módulo Sintomas", "Service", "Processa registros de sintomas")
+Component(alertas, "Módulo Alertas", "Service", "Gera notificações baseadas em regras")
+Component(comunicacao, "Módulo Comunicação", "Service", "Gerencia chat e mensagens")
+Component(analise, "Módulo Análise", "Service", "Identifica tendências e padrões")
+Component(auth, "Autenticação", "Controller", "Gerencia login/autorização")
+Component(repos, "Repositórios", "Sequelize", "Abstração de acesso ao banco")
+
+Rel(dialise, repos, "Persiste dados")
+Rel(sintomas, repos, "Persiste sintomas")
+Rel(alertas, dialise, "Consulta dados para alertas")
+Rel(analise, repos, "Analisa dados históricos")
+Rel(auth, repos, "Valida credenciais")
+
+' Relacionamento entre componentes e o container principal (opcional)
+Rel(api, dialise, "Usa")
+Rel(api, sintomas, "Usa")
+Rel(api, alertas, "Usa")
+Rel(api, comunicacao, "Usa")
+Rel(api, analise, "Usa")
+Rel(api, auth, "Usa")
+Rel(api, repos, "Usa")
+
+@enduml
