@@ -1,0 +1,19 @@
+@startuml
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+  title Sistema DialyHome - Diagrama de Contexto
+
+  Person(paciente, "Paciente", "Usuário que realiza diálise peritoneal domiciliar")
+  Person(medico, "Médico", "Profissional que monitora pacientes")
+
+  System(dialyhome, "DialyHome", "Sistema web para monitoramento de diálise peritoneal")
+
+  Rel(paciente, dialyhome, "Registra dados clínicos\nVisualiza histórico\nRecebe alertas\nComunica com médicos")
+  Rel(medico, dialyhome, "Monitora pacientes\nRecebe alertas\nAnalisa tendências\nEnvia recomendações")
+
+  System_Ext(email, "Serviço de Email", "Envio de notificações e alertas")
+  System_Ext(s3, "Amazon S3", "Armazenamento de documentos/exames")
+
+  Rel(dialyhome, email, "Envia alertas/lembretes")
+  Rel(dialyhome, s3, "Armazena/recupera arquivos")
+@enduml
