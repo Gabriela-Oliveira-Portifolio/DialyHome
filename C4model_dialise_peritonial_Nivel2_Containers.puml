@@ -1,26 +1,23 @@
 @startuml
-!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 
-title DialyHome - Diagrama de Containers
+Person(patient, "Paciente")
+Person(doctor, "Médico")
+Person(admin, "Administrador")
 
-' Definindo os atores do sistema
-Person(paciente, "Paciente", "Usuário que realiza diálise peritoneal domiciliar")
-Person(medico, "Médico", "Profissional que monitora pacientes")
+System_Ext(email_system, "Sistema de E-mail", "Sistema externo para envio de notificações.")
 
-Container_Boundary(sistema, "Sistema DialyHome") {
-    Container(web, "Aplicação Web", "React", "Interface responsiva para pacientes e médicos")
-    Container(api, "API Backend", "Node.js/Express", "Lógica de negócios e integrações")
-    Container(db, "Banco de Dados", "PostgreSQL", "Armazenamento de dados transacionais")
+Boundary(dialyhome_system, "Sistema DialyHome") {
+  Container(web_app, "Aplicação Web Frontend", "React, React Bootstrap, Chart.js, Axios", "Interface do usuário para pacientes, médicos e administradores.")
+  Container(api_backend, "API Backend", "JavaScript/TypeScript", "Processa requisições, lógica de negócios e interação com o banco de dados.")
+  ContainerDb(database, "Banco de Dados", "Relacional/NoSQL", "Armazena dados de pacientes, médicos, parâmetros de diálise, etc.")
 }
 
-System_Ext(email, "Serviço de Email", "Nodemailer/SMTP")
-System_Ext(s3, "Armazenamento de Arquivos", "Amazon S3")
+Rel(patient, web_app, "Utiliza", "Web Browser")
+Rel(doctor, web_app, "Utiliza", "Web Browser")
+Rel(admin, web_app, "Utiliza", "Web Browser")
+Rel(web_app, api_backend, "Faz requisições API", "JSON/HTTPS")
+Rel(api_backend, database, "Lê e escreve", "JDBC/ODBC")
+Rel(api_backend, email_system, "Envia notificações", "SMTP")
 
-Rel(web, api, "Consome API via HTTPS")
-Rel(api, db, "Consulta/Atualiza dados via Sequelize ORM")
-Rel(api, email, "Envia notificações via Nodemailer")
-Rel(api, s3, "Gerencia uploads/downloads via SDK AWS")
-
-Rel_U(paciente, web, "Usa interface do paciente")
-Rel_U(medico, web, "Usa interface médica")
 @enduml
