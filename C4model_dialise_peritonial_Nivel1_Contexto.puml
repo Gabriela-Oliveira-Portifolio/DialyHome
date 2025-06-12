@@ -1,19 +1,17 @@
 @startuml
-!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
-  title Sistema DialyHome - Diagrama de Contexto
+Person(patient, "Paciente", "Realiza diálise peritoneal domiciliar e registra dados de tratamento.")
+Person(doctor, "Médico", "Acompanha pacientes, recebe alertas e gera relatórios.")
+Person(admin, "Administrador", "Gerencia usuários e o sistema.")
 
-  Person(paciente, "Paciente", "Usuário que realiza diálise peritoneal domiciliar")
-  Person(medico, "Médico", "Profissional que monitora pacientes")
+System(dialyhome, "DialyHome", "Sistema Web para controle de informações geradas pela Diálise Peritoneal Domiciliar.")
 
-  System(dialyhome, "DialyHome", "Sistema web para monitoramento de diálise peritoneal")
+System_Ext(email_system, "Sistema de E-mail", "Sistema externo para envio de notificações.")
 
-  Rel(paciente, dialyhome, "Registra dados clínicos\nVisualiza histórico\nRecebe alertas\nComunica com médicos")
-  Rel(medico, dialyhome, "Monitora pacientes\nRecebe alertas\nAnalisa tendências\nEnvia recomendações")
+Rel(patient, dialyhome, "Utiliza", "Web Browser")
+Rel(doctor, dialyhome, "Utiliza", "Web Browser")
+Rel(admin, dialyhome, "Utiliza", "Web Browser")
+Rel(dialyhome, email_system, "Envia lembretes e alertas para")
 
-  System_Ext(email, "Serviço de Email", "Envio de notificações e alertas")
-  System_Ext(s3, "Amazon S3", "Armazenamento de documentos/exames")
-
-  Rel(dialyhome, email, "Envia alertas/lembretes")
-  Rel(dialyhome, s3, "Armazena/recupera arquivos")
 @enduml
