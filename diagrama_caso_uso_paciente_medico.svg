@@ -1,0 +1,22 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Atores -->
+  <circle cx="50" cy="150" r="20" fill="white" stroke="black" stroke-width="2"/>
+  <line x1="50" y1="170" x2="50" y2="220" stroke="black" stroke-width="2"/>
+  <line x1="10" y1="200" x2="90" y2="200" stroke="black" stroke-width="2"/>
+  <line x1="50" y1="220" x2="10" y2="260" stroke="black" stroke-width="2"/>
+  <line x1="50" y1="220" x2="90" y2="260" stroke="black" stroke-width="2"/>
+  <text x="50" y="290" text-anchor="middle" font-family="Arial" font-size="14">Paciente</text>
+
+  <circle cx="350" cy="150" r="20" fill="white" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="170" x2="350" y2="220" stroke="black" stroke-width="2"/>
+  <line x1="310" y1="200" x2="390" y2="200" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="220" x2="310" y2="260" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="220" x2="390" y2="260" stroke="black" stroke-width="2"/>
+  <text x="350" y="290" text-anchor="middle" font-family="Arial" font-size="14">Médico</text>
+
+  <!-- Caso de uso compartilhado -->
+  <ellipse cx="200" cy="150" rx="70" ry="30" fill="white" stroke="black" stroke-width="2"/>
+  <text x="200" y="155" text-anchor="middle" font-family="Arial" font-size="12">Comunicar</text>
+  <line x1="120" y1="150" x2="130" y2="150" stroke="black" stroke-width="2"/>
+  <line x1="280" y1="150" x2="270" y2="150" stroke="black" stroke-width="2"/>
+</svg>
