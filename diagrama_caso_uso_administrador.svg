@@ -1,0 +1,22 @@
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Administrador -->
+  <circle cx="250" cy="400" r="20" fill="white" stroke="black" stroke-width="2"/>
+  <line x1="250" y1="420" x2="250" y2="470" stroke="black" stroke-width="2"/>
+  <line x1="210" y1="450" x2="290" y2="450" stroke="black" stroke-width="2"/>
+  <line x1="250" y1="470" x2="210" y2="510" stroke="black" stroke-width="2"/>
+  <line x1="250" y1="470" x2="290" y2="510" stroke="black" stroke-width="2"/>
+  <text x="250" y="540" text-anchor="middle" font-family="Arial" font-size="14">Administrador</text>
+
+  <!-- Casos de Uso -->
+  <ellipse cx="250" cy="300" rx="70" ry="30" fill="white" stroke="black" stroke-width="2"/>
+  <text x="250" y="305" text-anchor="middle" font-family="Arial" font-size="12">Gerenciar usuários</text>
+  <line x1="250" y1="380" x2="250" y2="330" stroke="black" stroke-width="2"/>
+  
+  <ellipse cx="110" cy="340" rx="70" ry="30" fill="white" stroke="black" stroke-width="2"/>
+  <text x="110" y="345" text-anchor="middle" font-family="Arial" font-size="12">Auditar sistema</text>
+  <line x1="220" y1="390" x2="150" y2="350" stroke="black" stroke-width="2"/>
+  
+  <ellipse cx="390" cy="340" rx="70" ry="30" fill="white" stroke="black" stroke-width="2"/>
+  <text x="390" y="345" text-anchor="middle" font-family="Arial" font-size="12">Gerar estatísticas</text>
+  <line x1="280" y1="390" x2="350" y2="350" stroke="black" stroke-width="2"/>
+</svg>
